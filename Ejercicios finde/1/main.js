@@ -15,8 +15,8 @@ function createHeader(){
         li.appendChild(link);
     }
     
-    const google = document.getElementsByTagName("a")[0];
-    const facebook = document.getElementsByTagName("a")[1];
+    const google = document.getElementsByTagName('a')[0];
+    const facebook = document.getElementsByTagName('a')[1];
     google.setAttribute("href", "https://www.google.com");
     facebook.setAttribute("href", "https://www.facebook.com");
 
@@ -48,8 +48,8 @@ function createMain(){
         tr.appendChild(th);
     }
 
-    const titulo = document.getElementsByTagName("th")[0];
-    const fechaEstreno = document.getElementsByTagName("th")[1];
+    const titulo = document.getElementsByTagName('th')[0];
+    const fechaEstreno = document.getElementsByTagName('th')[1];
     const textTitulo = document.createTextNode('Título');
     const textFechaEstreno = document.createTextNode('Fecha de Estreno');
     titulo.appendChild(textTitulo);
@@ -66,8 +66,8 @@ function createMain(){
         trbody.appendChild(td);
     }
 
-    const filmTitle = document.getElementsByTagName("td")[0];
-    const date = document.getElementsByTagName("td")[1];
+    const filmTitle = document.getElementsByTagName('td')[0];
+    const date = document.getElementsByTagName('td')[1];
     const textFilmTitle = document.createTextNode('Loonis');
     const textDate = document.createTextNode('01/01/19');
     filmTitle.appendChild(textFilmTitle);

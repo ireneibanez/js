@@ -9,7 +9,7 @@ while (exit === false) {
     switch (menu) {
         case '1':
             for (let i=0; i < taskList.length; i++) {
-                console.log(i + taskList[i].descripcion + ' . Estado: ' + taskList[i].estado);
+                console.log(i + taskList[i].descripcion + ' .estado: ' + taskList[i].estado);
             }
             break;
         case '2':
