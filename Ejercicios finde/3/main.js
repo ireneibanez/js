@@ -4,7 +4,7 @@ let taskList = [];
 
 while (exit === false) {
 
-    let menu = window.prompt("Seleccione la opción que desee: \n 1.Mostrar la lista de tareas. \n 2.Añadir una tarea nueva. \n 3.Marcar una tarea como terminada. \n 4.Eliminar una tarea. \n 5.Salir.");
+    let menu = window.prompt('Seleccione la opción que desee: \n 1.Mostrar la lista de tareas. \n 2.Añadir una tarea nueva. \n 3.Marcar una tarea como terminada. \n 4.Eliminar una tarea. \n 5.Salir.');
 
     switch (menu) {
         case '1':
@@ -13,7 +13,7 @@ while (exit === false) {
             }
             break;
         case '2':
-            let description = window.prompt("Realice una descripción de la tarea a añadir:")
+            let description = window.prompt('Realice una descripción de la tarea a añadir:')
             if (description) {
                 let newTask = {
                     estado: 'pendiente',
@@ -21,7 +21,7 @@ while (exit === false) {
                 }
                 taskList.push(newTask);
             } else {
-                console.log("La descripción introducida no es válida");
+                console.log('La descripción introducida no es válida');
             }
             break;
         case '3':
