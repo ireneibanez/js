@@ -1,0 +1,12 @@
+table tr td {
+    border: 1px solid black;
+    color: #fff;
+}
+
+.even {
+    background-color: yellow;
+}
+
+.odd {
+    background-color: blue;
+}
