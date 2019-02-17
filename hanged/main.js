@@ -1,8 +1,7 @@
 
-
 function init(){
-    const word = window.prompt('Get a word to start the game').toLowerCase();
-    const matches = new Array(word.length).fill('_');
+    let word = window.prompt('Get a word to start the game').toLowerCase();
+    let matches = new Array(word.length).fill('_');
     let fails = 0;
 
     function onkeypress (event) {
@@ -11,6 +10,9 @@ function init(){
             if (event.key === word.charAt(i)) {
                 matches[i] = event.key;
                 finded = true;
+                if (matches.join('').toString() === word) {
+                    alert ('Your prisioner is free');
+                }
             }
         }
         if (!finded) {
@@ -20,7 +22,6 @@ function init(){
                 document.body.onkeypress = null;
             }
         }
-
         document.getElementById('word').innerText = matches.join(' ');
         document.getElementById('img').setAttribute('src', fails + '.png');
     }

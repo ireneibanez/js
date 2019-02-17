@@ -1,0 +1,10 @@
+.general{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;  
+}
+.cell{
+    border: 1px solid black;
+    width: calc(600px/9);
+    height: 50px;
+}
