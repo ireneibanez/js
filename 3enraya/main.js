@@ -6,9 +6,15 @@ const board = [
 ]
 
 let turn = 'X';
+let won = false;
 
 function doTurn() {
+    if (won) {
+        return;
+    }
+
     const pos = this.id.split('-').map(Number);
+    
     if(board[pos[0]][pos[1]]){
         return;
     }
@@ -16,6 +22,7 @@ function doTurn() {
     board[pos[0]][pos[1]] = turn;
    
     if(win()){
+        won = true;
         alert('Has ganado');
     } else if (looser(board)) {
         alert('Has perdido');

@@ -1,0 +1,15 @@
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+form > label {
+    margin: 10px;
+}
+
+form > label > span {
+    color: red;
+}
