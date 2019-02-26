@@ -89,7 +89,6 @@
             }
             return true;       
         }
-
         
 
         const nameInput = new TextInput('name', [RequiredValidator, createMinLength(5)]);
@@ -103,15 +102,42 @@
         const passwordInput = new TextInput('password', [RequiredValidator, PasswordValidator]);
         const repeatInput = new TextInput('repeatPassword', [RequiredValidator, checkPassword(passwordInput)]);
 
+        class Form {
+            constructor(inputs) {
+                this.inputs = inputs;
+            }
+            getInput(){
+                const data = {};
+                for (let i=0; i<this.inputs.length; i++) {
+                    data[this.inputs[i].el.id] = this.inputs[i].el.value;
+                }
+                return data;
+            }
+
+            validateForm(){
+                for (let i=0; i<this.inputs.length; i++) {
+                    if (this.inputs[i].validate() === false){
+                        console.log('Invalid Form');
+                        return false;
+                    }
+                }
+                console.log('Valid Form');
+                return true;
+            }
+        }
+
+        const instanceForm = new Form([nameInput, surnameInput, ageInput, emailInput, postalCodeInput, addressInput, typeInput, cityInput, passwordInput, repeatInput]);
 
         function submit(event) {
             event.preventDefault();
-            if (nameInput.validate() && surnameInput.validate() && ageInput.validate() && emailInput.validate() && postalCodeInput.validate() && addressInput.validate() && typeInput.validate() && cityInput.validate() && passwordInput.validate() && repeatInput.validate()) {
-                console.log('Valid form');
+            if (instanceForm.validateForm() === true) {
+                console.log(instanceForm.getInput());
             } else {
                 console.log('Invalid form');
+                return false;
             }
-            return false;
+            
         }
+        
 
-        document.querySelector('form').onsubmit = submit;
+    document.querySelector('form').onsubmit = submit;
