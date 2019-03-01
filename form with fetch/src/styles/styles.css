@@ -1,0 +1,14 @@
+table {
+    margin: 50px;
+}
+
+th {
+    background-color: blueviolet;
+    border: 1px solid black; 
+    width: 150px;   
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

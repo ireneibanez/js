@@ -1,0 +1,29 @@
+{
+  "name": "week6_day4",
+  "version": "1.0.0",
+  "description": "- Crea una función que devuelva un array1 con los números primos contenidos en otro array2 de números del 1 al 20. El array2 debe ser privado y no modificable desde fuera de la función.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server -d --open --config webpack.config --progress",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/campusboream/week6_day4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "bugs": {
+    "url": "https://github.com/campusboream/week6_day4/issues"
+  },
+  "homepage": "https://github.com/campusboream/week6_day4#readme"
+}
